@@ -8,13 +8,13 @@ export default function Header() {
         <Link href="/" className="flex items-center gap-3">
           <Image
             src="/smt-logo.jpg"
-            alt="St Matthew's Taitā logo — a woven cross in black, white, and red"
+            alt="St Matt's Taitā logo — a woven cross in black, white, and red"
             width={40}
             height={40}
             className="rounded-full"
           />
           <span className="text-church-blue font-semibold text-lg">
-            St Matthew&apos;s Taitā
+            St Matt&apos;s Taitā
           </span>
         </Link>
       </div>

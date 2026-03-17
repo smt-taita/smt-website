@@ -3,9 +3,9 @@ import Link from "next/link";
 import SectionHeading from "@/components/SectionHeading";
 
 export const metadata: Metadata = {
-  title: "Hall Hire | St Matthew's Anglican Church Taitā",
+  title: "Hall Hire | St Matt's Anglican Church Taitā",
   description:
-    "Hire St Matthew's Taitā hall, kitchen, and meeting rooms for community events. Available to groups across Taitā, Pomare, and Avalon. From $15/hour.",
+    "Hire St Matt's Taitā hall, kitchen, and meeting rooms for community events. Available to groups across Taitā, Pomare, and Avalon. From $15/hour.",
 };
 
 /**
@@ -58,7 +58,7 @@ export default function HallHirePage() {
 
       {/* ── Page heading ── */}
       <SectionHeading subtitle="Community facilities available for hire">
-        Hireage of St Matthew&apos;s <span lang="mi">Taitā</span>
+        Hireage of St Matt&apos;s <span lang="mi">Taitā</span>
       </SectionHeading>
 
       {/* ── Introduction ── */}
@@ -347,7 +347,7 @@ export default function HallHirePage() {
             </p>
             <p className="text-lg text-church-slate mb-4">
               <span className="font-medium">Account name: </span>
-              St Matthew&apos;s <span lang="mi">Taitā</span>
+              St Matt&apos;s <span lang="mi">Taitā</span>
             </p>
             {/* Reminding hirers to use their name as reference prevents payment matching issues */}
             <p className="text-lg text-church-slate bg-slate-50 border border-slate-200 rounded-lg px-4 py-3">
