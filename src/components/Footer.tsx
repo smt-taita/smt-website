@@ -9,13 +9,13 @@ export default function Footer() {
           <div className="flex items-center gap-3">
             <Image
               src="/smt-logo.jpg"
-              alt="St Matthew's Taitā logo"
+              alt="St Matt's Taitā logo"
               width={48}
               height={48}
               className="rounded-full bg-white p-1"
             />
             <span className="font-bold text-xl">
-              St Matthew&apos;s Anglican Church{" "}
+              St Matt&apos;s Anglican Church{" "}
               <span lang="mi">Taitā</span>
             </span>
           </div>
@@ -78,7 +78,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <p className="text-white/60 text-sm">
-            &copy; 2026 St Matthew&apos;s Anglican Church{" "}
+            &copy; 2026 St Matt&apos;s Anglican Church{" "}
             <span lang="mi">Taitā</span>
           </p>
         </div>

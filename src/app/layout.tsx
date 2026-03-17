@@ -11,11 +11,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "St Matthew's Anglican Church Taitā",
+  title: "St Matt's Anglican Church Taitā",
   description:
     "One small church with one big heart. Join us Sundays at 9:30 AM, 53 Reynolds Street, Taitā.",
   openGraph: {
-    title: "St Matthew's Anglican Church Taitā",
+    title: "St Matt's Anglican Church Taitā",
     description:
       "One small church with one big heart. Serving the Taitā, Pomare, and Avalon communities.",
     type: "website",

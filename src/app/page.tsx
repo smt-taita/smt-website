@@ -10,7 +10,7 @@ export default function Home() {
           <div className="mx-auto mb-8 w-20 h-20 md:w-28 md:h-28 rounded-full bg-white p-2 flex items-center justify-center">
             <Image
               src="/smt-logo.jpg"
-              alt="St Matthew's Taitā logo — a woven cross in black, white, and red"
+              alt="St Matt's Taitā logo — a woven cross in black, white, and red"
               width={112}
               height={112}
               className="rounded-full"
@@ -22,7 +22,7 @@ export default function Home() {
           </p>
           <p className="text-lg md:text-xl text-white/80 mb-6">Welcome</p>
           <h1 className="text-3xl md:text-5xl font-bold mb-4 max-w-2xl mx-auto">
-            St Matthew&apos;s Anglican Church{" "}
+            St Matt&apos;s Anglican Church{" "}
             <span lang="mi">Taitā</span>
           </h1>
           <p className="text-xl md:text-2xl text-white/90">
@@ -99,7 +99,7 @@ export default function Home() {
                   02-0610-0070823-00
                 </p>
                 <p className="text-sm text-church-slate mt-1">
-                  St Matthew&apos;s{" "}
+                  St Matt&apos;s{" "}
                   <span lang="mi">Taitā</span>
                 </p>
               </div>
