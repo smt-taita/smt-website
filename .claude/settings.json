@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "defaultMode": "acceptEdits",
+    "allow": [
+      "Bash(git:*)",
+      "Bash(npm:*)",
+      "Bash(npx:*)",
+      "Bash(node:*)",
+      "Bash(gh:*)",
+      "Bash(curl:*)",
+      "Bash(vercel:*)",
+      "WebFetch",
+      "Read"
+    ],
+    "ask": [
+      "Bash(git push --force*)",
+      "Bash(git reset --hard*)",
+      "Bash(git branch -D*)",
+      "Bash(rm -rf*)",
+      "Bash(rm -r*)"
+    ]
+  }
+}
