@@ -1,34 +1,34 @@
-# **Comprehensive Technical and Strategic Specification for the St Matthew’s Anglican Church Taitā Digital Ecosystem**
+# **Comprehensive Technical and Strategic Specification for the St Matt’s Anglican Church Taitā Digital Ecosystem**
 
 ## **Evolution of Parish Digital Strategy in the Lower Hutt Context**
 
-The development of a new digital presence for St Matthew’s Anglican Church in Taitā occurs at a pivotal moment in the parish’s history, marked by physical relocation and a fundamental reimagining of its mission within the Taitā, Pomare, and Avalon neighborhoods.1 Following the discovery of asbestos in the original concrete block church building, the community made the strategic decision to shift its liturgical and social activities to the adjacent hall, which has since been upgraded and designated as a sacred space for services.2 This physical shift from a dedicated ecclesiastical structure to a multi-purpose community hub serves as the primary driver for a digital strategy that prioritizes accessibility, community utility, and simplicity over architectural or institutional grandeur.2
+The development of a new digital presence for St Matt’s Anglican Church in Taitā occurs at a pivotal moment in the parish’s history, marked by physical relocation and a fundamental reimagining of its mission within the Taitā, Pomare, and Avalon neighborhoods.1 Following the discovery of asbestos in the original concrete block church building, the community made the strategic decision to shift its liturgical and social activities to the adjacent hall, which has since been upgraded and designated as a sacred space for services.2 This physical shift from a dedicated ecclesiastical structure to a multi-purpose community hub serves as the primary driver for a digital strategy that prioritizes accessibility, community utility, and simplicity over architectural or institutional grandeur.2
 
 The requirement for a simplified website, as articulated in the foundational brief, necessitates a synthesis of localized grassroots mission and standardized diocesan administrative data.3 The digital ecosystem must serve as a front door for the "one small church with one big heart" 2, specifically highlighting the St Matt’s Kāinga housing project and the Community Garden/Food Forest initiatives.2 By adopting a "smaller and simpler" version of the architecture used by St David’s Anglican Church in Naenae, the Taitā parish seeks to reduce digital overhead while maximizing the visibility of its core values: whānau, worship, and service.3
 
-The broader context of the Anglican Movement in the Wellington Diocese informs the administrative requirements of the site. The Diocese has recently focused on three strategic priorities—finance, governance, and property—all of which are reflected in the operational needs of St Matthew’s.7 The digital specification must therefore account for the "Whakahaere" framework, a system of governance and administrative requirements that ensures the parish remains compliant with its charitable status and historical obligations.4 This report provides the exhaustive technical and content-driven detail necessary for Claude Code to execute a robust, low-maintenance, and mission-aligned web platform.
+The broader context of the Anglican Movement in the Wellington Diocese informs the administrative requirements of the site. The Diocese has recently focused on three strategic priorities—finance, governance, and property—all of which are reflected in the operational needs of St Matt’s.7 The digital specification must therefore account for the "Whakahaere" framework, a system of governance and administrative requirements that ensures the parish remains compliant with its charitable status and historical obligations.4 This report provides the exhaustive technical and content-driven detail necessary for Claude Code to execute a robust, low-maintenance, and mission-aligned web platform.
 
 ## **Comparative Benchmarking: The St David’s Naenae Paradigm**
 
-St David’s Anglican Church in Naenae, located at 3 Seddon Street, serves as the contemporary benchmark for this project. An analysis of their digital footprint reveals a single-page scrolling layout that integrates complex community programs with traditional liturgical schedules.6 While St David’s manages an elaborate rhythm of gatherings, including house churches on the 2nd and 4th Sundays and contemporary worship on the 1st, 3rd, and 5th Sundays, St Matthew’s requires a distilled version that reflects its more centralized weekly gathering at 9:30 AM.1
+St David’s Anglican Church in Naenae, located at 3 Seddon Street, serves as the contemporary benchmark for this project. An analysis of their digital footprint reveals a single-page scrolling layout that integrates complex community programs with traditional liturgical schedules.6 While St David’s manages an elaborate rhythm of gatherings, including house churches on the 2nd and 4th Sundays and contemporary worship on the 1st, 3rd, and 5th Sundays, St Matt’s requires a distilled version that reflects its more centralized weekly gathering at 9:30 AM.1
 
 ### **Architectural Analysis and Simplification Strategy**
 
-The St David’s model utilizes distinct functional blocks: a navigational header, a hero section with bi-cultural greetings, an announcement block, a gathering schedule, a news/media feed, an activities grid, and a contact footer.6 For St Matthew’s, the reduction strategy involves collapsing these elements into five core areas: Welcome, Gatherings, Kāinga/Garden, About, and Contact. This simplification is not merely a reduction in content but a strategic focus on high-utility information that requires less frequent updating.
+The St David’s model utilizes distinct functional blocks: a navigational header, a hero section with bi-cultural greetings, an announcement block, a gathering schedule, a news/media feed, an activities grid, and a contact footer.6 For St Matt’s, the reduction strategy involves collapsing these elements into five core areas: Welcome, Gatherings, Kāinga/Garden, About, and Contact. This simplification is not merely a reduction in content but a strategic focus on high-utility information that requires less frequent updating.
 
-| Data Point | St David’s Naenae (Benchmark) | St Matthew’s Taitā (Requirement) |
+| Data Point | St David’s Naenae (Benchmark) | St Matt’s Taitā (Requirement) |
 | :---- | :---- | :---- |
-| **Physical Address** | 3 Seddon Street, Naenae.6 | 49 Reynolds St / 42 Poole St, Taitā. |
+| **Physical Address** | 3 Seddon Street, Naenae.6 | 53 Reynolds St (worship) / 42 Poole St (postal), Taitā. |
 | **Service Frequency** | Complex 1st/3rd/5th rotation.10 | Consistent Weekly at 9:30 AM.1 |
 | **Primary Outreach** | Fruit & Veg Co-op, Crow Barre, Pilates.6 | Kāinga Housing, Community Garden.2 |
 | **Digital Structure** | Multi-page scrolling with media blog.6 | Smaller, simpler single-page focus. |
 | **Leadership Model** | Multiple Priests, Missioners, and Wardens.12 | Co-missioner and Management Committee.3 |
 
-The tone of the St David’s site is "ancient-future," rooted in historic creeds like the Jerusalem Declaration and the Thirty-Nine Articles while maintaining a charismatic spirit.13 St Matthew’s specification moves away from this dense theological exposition in favor of a "living story" narrative that emphasizes practical discipleship and creation care.3 The digital front door must reflect the "whānau" identity, characterized by shared meals and a "Club that exists for others" philosophy.3
+The tone of the St David’s site is "ancient-future," rooted in historic creeds like the Jerusalem Declaration and the Thirty-Nine Articles while maintaining a charismatic spirit.13 St Matt’s specification moves away from this dense theological exposition in favor of a "living story" narrative that emphasizes practical discipleship and creation care.3 The digital front door must reflect the "whānau" identity, characterized by shared meals and a "Club that exists for others" philosophy.3
 
 ## **Institutional Identity and Narrative Specification**
 
-The core copy for the St Matthew's website must be derived from the "2019 Action Plan" and subsequent mission updates.3 The mission statement is explicitly defined as "to shine Christ’s light into the community and focus on worship and prayer for the church whānau".3 This dual focus on inward spiritual formation and outward community service must be woven into every narrative section of the site.
+The core copy for the St Matt's website must be derived from the "2019 Action Plan" and subsequent mission updates.3 The mission statement is explicitly defined as "to shine Christ’s light into the community and focus on worship and prayer for the church whānau".3 This dual focus on inward spiritual formation and outward community service must be woven into every narrative section of the site.
 
 ### **Mission and Foundations**
 
@@ -66,13 +66,13 @@ For Claude Code to implement the necessary financial features, the specification
 The website must feature a "Support Our Housing Mission" section with the following requirements:
 
 * **Donation Information**: Clear instructions for one-off or regular donations.  
-* **Bank Account Details**: St Matthew's Taitā, 02-0610-0070823-00.  
+* **Bank Account Details**: St Matt's Taitā, 02-0610-0070823-00.  
 * **Reference Codes**: Use "housing" or "Kainga" for tracking purposes.  
 * **Financial Accountability**: Mention that quarterly updates are provided to supporters to maintain transparency.
 
 ## **Creation Care: The Community Garden and Food Forest**
 
-As an official "Eco Church" in partnership with A Rocha Aotearoa NZ, St Matthew’s prioritizes environmental sustainability as a core component of its spiritual life.5 The Community Garden serves as the primary practical vehicle for this mission.
+As an official "Eco Church" in partnership with A Rocha Aotearoa NZ, St Matt’s prioritizes environmental sustainability as a core component of its spiritual life.5 The Community Garden serves as the primary practical vehicle for this mission.
 
 ### **The Food Forest Vision**
 
@@ -89,7 +89,7 @@ The narrative should explain that the garden involves approximately 10 active ad
 
 ## **Operational Governance: The Whakahaere Framework**
 
-The website must facilitate the administrative relationship between St Matthew's and the Anglican Centre.4 This relationship is managed through the "Whakahaere" communications, which outline the essential tasks required for a parish to remain in good standing.4
+The website must facilitate the administrative relationship between St Matt's and the Anglican Centre.4 This relationship is managed through the "Whakahaere" communications, which outline the essential tasks required for a parish to remain in good standing.4
 
 ### **Compliance and Administrative Cycles**
 
@@ -152,11 +152,11 @@ Under the Health and Safety at Work Act, the parish is responsible for the safet
 
 ## **Synthesis and Strategic Recommendations**
 
-The transition of St Matthew’s Anglican Church Taitā to a hall-based community hub necessitates a digital presence that is as flexible and functional as its physical space.2 By focusing on the "St Matt's Kāinga" and the "Community Garden," the website will effectively communicate the parish's unique identity as a "faith community built on serving others".2
+The transition of St Matt’s Anglican Church Taitā to a hall-based community hub necessitates a digital presence that is as flexible and functional as its physical space.2 By focusing on the "St Matt's Kāinga" and the "Community Garden," the website will effectively communicate the parish's unique identity as a "faith community built on serving others".2
 
 The implementation by Claude Code should prioritize the "simple but key" directive, ensuring that the high-maintenance elements of the St David's site (like extensive media blogs or rotating roster systems) are replaced with static, high-value information that serves the community's immediate needs.6 This requirements document provides the necessary granularity—from bank account numbers and schedule deadlines to mission statements and housing unit counts—to ensure a successful build that empowers the Taitā church whānau to continue "shining Christ's light" into the neighborhood.
 
-The final deliverable should be a single-page scrolling site that acts as a digital mission station, bridging the gap between historical Anglican tradition and the pressing social needs of modern Lower Hutt.2 By integrating the "Whakahaere" compliance framework with the "Kāinga" social mission, St Matthew’s will possess a digital tool that is both legally robust and spiritually vibrant.
+The final deliverable should be a single-page scrolling site that acts as a digital mission station, bridging the gap between historical Anglican tradition and the pressing social needs of modern Lower Hutt.2 By integrating the "Whakahaere" compliance framework with the "Kāinga" social mission, St Matt’s will possess a digital tool that is both legally robust and spiritually vibrant.
 
 #### **Works cited**
 

@@ -1,4 +1,4 @@
-# St Matthew's Taitā Website — Design Document
+# St Matt's Taitā Website — Design Document
 
 **Date:** 2026-03-02
 **Status:** Approved
@@ -47,7 +47,7 @@ Exact HSL values to be extracted from the housing site CSS and defined as CSS cu
 ### Layout Shell
 
 - No sticky nav for v1 — page is short enough to scroll
-- Small fixed header: logo (small) + "St Matthew's Taitā" left-aligned, minimal
+- Small fixed header: logo (small) + "St Matt's Taitā" left-aligned, minimal
 - Shared header/footer component used by both home page and hall hire page
 - `<html lang="en">` with appropriate meta tags and OG data
 
@@ -60,7 +60,7 @@ Exact HSL values to be extracted from the housing site CSS and defined as CSS cu
   1. Logo in white circle — `w-20 h-20 md:w-28 md:h-28`
   2. `<span lang="mi">Nau mai, haere mai</span>` — lighter, smaller
   3. "Welcome" — below the Te Reo greeting
-  4. "St Matthew's Anglican Church Taitā" — `text-3xl md:text-5xl font-bold text-white`
+  4. "St Matt's Anglican Church Taitā" — `text-3xl md:text-5xl font-bold text-white`
   5. "One small church with one big heart" — `text-xl text-white/90`
   6. Subtle animated scroll indicator (chevron, gentle bounce)
 
@@ -110,14 +110,14 @@ Exact HSL values to be extracted from the housing site CSS and defined as CSS cu
 #### Section 6: Contact Footer (gradient background)
 
 - **Background:** `from-church-blue to-church-green` gradient (bookends with hero)
-- Logo (small) + "St Matthew's Anglican Church Taitā"
+- Logo (small) + "St Matt's Anglican Church Taitā"
 - Two addresses distinguished:
   - "Visit us: 53 Reynolds Street, Taitā"
   - "Post: 42 Poole Street, Taitā"
 - Phone: `tel:` link — 022 409 7237
 - Email: `mailto:` link — admin@stmattstaita.org.nz
 - Facebook icon → `https://www.facebook.com/profile.php?id=100088895017140`
-- Copyright: "© 2026 St Matthew's Anglican Church Taitā"
+- Copyright: "© 2026 St Matt's Anglican Church Taitā"
 
 ---
 
@@ -127,7 +127,7 @@ Shares header and footer with home page. Standard content page layout.
 
 #### Content Sections
 
-1. **Page heading:** "Hireage of St Matthew's Taitā"
+1. **Page heading:** "Hireage of St Matt's Taitā"
 2. **Introduction:** Welcome statement about facilities being a community resource
 3. **Facilities:**
    - Hall, Kitchen and Foyer — description and usage notes
@@ -143,7 +143,7 @@ Shares header and footer with home page. Standard content page layout.
    - Alcohol, cleaning, rubbish/recycling, storage, damage, parking, power, keys, earthquake procedure
 6. **Booking and Payment:**
    - Email: admin@stmattstaita.org.nz
-   - Bank: BNZ 02-0610-0070823-00, account name: St Matthew's Taitā
+   - Bank: BNZ 02-0610-0070823-00, account name: St Matt's Taitā
    - Key policy
 
 ---

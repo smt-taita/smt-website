@@ -1,4 +1,4 @@
-# St Matthew's Taitā Website Implementation Plan
+# St Matt's Taitā Website Implementation Plan
 
 > **For Claude:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task.
 
@@ -84,11 +84,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "St Matthew's Anglican Church Taitā",
+  title: "St Matt's Anglican Church Taitā",
   description:
     "One small church with one big heart. Join us Sundays at 9:30 AM, 53 Reynolds Street, Taitā.",
   openGraph: {
-    title: "St Matthew's Anglican Church Taitā",
+    title: "St Matt's Anglican Church Taitā",
     description:
       "One small church with one big heart. Serving the Taitā, Pomare, and Avalon communities.",
     type: "website",
@@ -144,13 +144,13 @@ export default function Header() {
         <Link href="/" className="flex items-center gap-3">
           <Image
             src="/smt-logo.jpg"
-            alt="St Matthew's Taitā logo — a woven cross in black, white, and red"
+            alt="St Matt's Taitā logo — a woven cross in black, white, and red"
             width={40}
             height={40}
             className="rounded-full"
           />
           <span className="text-church-blue font-semibold text-lg">
-            St Matthew&apos;s Taitā
+            St Matt&apos;s Taitā
           </span>
         </Link>
       </div>
@@ -173,13 +173,13 @@ export default function Footer() {
           <div className="flex items-center gap-3">
             <Image
               src="/smt-logo.jpg"
-              alt="St Matthew's Taitā logo"
+              alt="St Matt's Taitā logo"
               width={48}
               height={48}
               className="rounded-full bg-white p-1"
             />
             <span className="font-bold text-xl">
-              St Matthew&apos;s Anglican Church{" "}
+              St Matt&apos;s Anglican Church{" "}
               <span lang="mi">Taitā</span>
             </span>
           </div>
@@ -235,7 +235,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <p className="text-white/60 text-sm">
-            &copy; 2026 St Matthew&apos;s Anglican Church{" "}
+            &copy; 2026 St Matt&apos;s Anglican Church{" "}
             <span lang="mi">Taitā</span>
           </p>
         </div>
@@ -324,7 +324,7 @@ export default function Home() {
           <div className="mx-auto mb-8 w-20 h-20 md:w-28 md:h-28 rounded-full bg-white p-2 flex items-center justify-center">
             <Image
               src="/smt-logo.jpg"
-              alt="St Matthew's Taitā logo — a woven cross in black, white, and red"
+              alt="St Matt's Taitā logo — a woven cross in black, white, and red"
               width={112}
               height={112}
               className="rounded-full"
@@ -336,7 +336,7 @@ export default function Home() {
           </p>
           <p className="text-lg md:text-xl text-white/80 mb-6">Welcome</p>
           <h1 className="text-3xl md:text-5xl font-bold mb-4 max-w-2xl mx-auto">
-            St Matthew&apos;s Anglican Church{" "}
+            St Matt&apos;s Anglican Church{" "}
             <span lang="mi">Taitā</span>
           </h1>
           <p className="text-xl md:text-2xl text-white/90">
@@ -676,8 +676,8 @@ git commit -m "feat: add gradient contact footer to shared layout"
 Create `src/app/hall-hire/page.tsx` with the full hall hire content. This is a standard content page using SectionHeading and the shared layout (Header + Footer come from layout.tsx automatically).
 
 The page should contain:
-- Page metadata with title "Hall Hire | St Matthew's Anglican Church Taitā"
-- Heading: "Hireage of St Matthew's Taitā"
+- Page metadata with title "Hall Hire | St Matt's Anglican Church Taitā"
+- Heading: "Hireage of St Matt's Taitā"
 - Introduction paragraph about facilities being a community resource
 - **Facilities section** with three subsections: Hall/Kitchen/Foyer, Front Meeting Room, Sacred Space
 - **Charges table** rendered as an HTML `<table>` or a styled list: main hall $20/hr, meeting rooms $15/hr, full day negotiated, bond $100

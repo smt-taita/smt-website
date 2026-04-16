@@ -1,16 +1,16 @@
-# St Matthew's Anglican Church Taitā Website — Product Requirement Document
+# St Matt's Anglican Church Taitā Website — Product Requirement Document
 
 **Version:** 1.0
 **Date:** 2026-03-02
 **Status:** Draft
-**Repository:** github.com/mdshearer/SMT-website
+**Repository:** github.com/mdshearer/smt-website
 **Live URL:** https://smt-website-dusky.vercel.app
 
 ---
 
 ## Overview
 
-St Matthew's Anglican Church Taitā is a small Anglican parish serving the Taitā, Pomare, and Avalon neighbourhoods of Lower Hutt, New Zealand. The parish's identity is captured in a single phrase: "One small church with one big heart." It is deliberately whānau-centred rather than institutional, and its most public expressions of mission are its Kāinga social housing development and its community garden/food forest.
+St Matt's Anglican Church Taitā is a small Anglican parish serving the Taitā, Pomare, and Avalon neighbourhoods of Lower Hutt, New Zealand. The parish's identity is captured in a single phrase: "One small church with one big heart." It is deliberately whānau-centred rather than institutional, and its most public expressions of mission are its Kāinga social housing development and its community garden/food forest.
 
 The website's purpose is to provide a warm, accessible, and low-maintenance digital front door for the parish. It must serve three distinct audiences:
 
@@ -53,7 +53,7 @@ The person responsible for maintaining the site. They have technical capability 
 **Acceptance Criteria:**
 - [ ] The page loads a full-width hero section as the first visible element, above the fold on both mobile and desktop.
 - [ ] The hero displays a high-quality photograph of the garden or upgraded hall that communicates warmth, community, and a lived-in space (not a corporate or formal church aesthetic).
-- [ ] The hero displays the parish name "St Matthew's Anglican Church Taitā" in a clear, legible heading.
+- [ ] The hero displays the parish name "St Matt's Anglican Church Taitā" in a clear, legible heading.
 - [ ] The hero displays a bicultural greeting — both Te Reo Māori and English — that reflects the parish's commitment to Te Tiriti and its local community (e.g., "Nau mai, haere mai / Welcome").
 - [ ] The hero displays the parish's core mission statement: "One small church with one big heart" or equivalent approved copy.
 - [ ] All text overlaid on the hero image maintains a minimum contrast ratio of 4.5:1 against the image background (WCAG 2.1 Level AA), achieved through a text overlay, scrim, or solid text block — not by relying on image content alone.
@@ -136,7 +136,7 @@ The person responsible for maintaining the site. They have technical capability 
 - [ ] The footer includes the email address: **admin@stmattstaita.org.nz**, displayed as a tappable `mailto:` link.
 - [ ] All contact details are selectable text (not images) for accessibility and usability.
 - [ ] The footer does not include a contact form — direct contact via phone and email is sufficient given the audience and maintenance constraints.
-- [ ] The footer includes a copyright notice referencing St Matthew's Anglican Church Taitā.
+- [ ] The footer includes a copyright notice referencing St Matt's Anglican Church Taitā.
 - [ ] The footer is the terminal element of the single-page layout; there is no separate contact page.
 
 ---
