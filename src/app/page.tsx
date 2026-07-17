@@ -26,7 +26,7 @@ export default function Home() {
             <span lang="mi">Taitā</span>
           </h1>
           <p className="text-xl md:text-2xl text-white/90">
-            One small church with one big heart
+            Transformed by Jesus, Transforming our Neighbourhood
           </p>
 
           {/* Scroll indicator — aria-hidden because it is purely decorative */}
@@ -67,9 +67,17 @@ export default function Home() {
                 53 Reynolds Street, <span lang="mi">Taitā</span>
               </a>
             </p>
+            <p className="text-church-slate text-lg mb-4">
+              Our time together typically runs for about an hour and a half
+              and includes worship, prayer, teaching and reflection for{" "}
+              <span lang="mi">tamariki</span> and adults, discussion,
+              communion, and a kids&apos; programme. As well as coffee + good{" "}
+              <span lang="mi">kai</span> afterwards — all welcome!
+            </p>
             <p className="text-church-slate text-lg">
-              Every Sunday, followed by coffee and{" "}
-              <span lang="mi">kai</span> together.
+              On the last Sunday of each month, we have a rhythm of GO (where
+              we serve in our neighbourhood) or INVITE (where we invite our
+              friends and neighbours to a more relaxed church gathering).
             </p>
           </div>
 
@@ -93,21 +101,31 @@ export default function Home() {
               Giving &amp; Tithes
             </summary>
             <div className="mt-4 bg-white rounded-xl border-l-4 border-church-blue p-8 shadow-sm">
+              <p className="text-church-slate mb-2">
+                St Matt&apos;s makes a big difference in our neighbourhood
+                thanks to the generosity of our people.
+              </p>
+              <p className="text-church-slate mb-4">
+                If you call this place &apos;home&apos; and would like to give,
+                here are the details:
+              </p>
               <div className="bg-slate-50 rounded-lg p-4 mb-4">
                 <p className="text-sm text-church-slate mb-1">Bank account</p>
                 <p className="font-mono text-lg font-semibold text-church-blue select-all">
                   02-0610-0070823-00
                 </p>
+                {/* Registered payee name — must match the bank record exactly,
+                    so no macron or apostrophe here. */}
                 <p className="text-sm text-church-slate mt-1">
-                  St Matt&apos;s{" "}
-                  <span lang="mi">Taitā</span>
+                  SAINT MATTHEWS - TAITA
                 </p>
               </div>
               <p className="text-church-slate mb-2">
                 Reference: <span className="font-semibold">your full name</span>
               </p>
               <p className="text-sm text-church-slate">
-                Tax receipts are emailed at the end of the financial year.
+                All giving is tax deductible, with receipts emailed at the end
+                of the tax year.
               </p>
             </div>
           </details>
@@ -157,14 +175,14 @@ export default function Home() {
             </div>
             <div className="bg-white rounded-xl border-l-4 border-church-green p-8 shadow-sm">
               <p className="font-semibold text-church-blue text-lg mb-2">
-                Go Sunday
+                GO &amp; INVITE Sundays
               </p>
               <p className="text-church-slate mb-1">
-                Last Sunday of every second month
+                Last Sunday of each month
               </p>
               <p className="text-church-slate text-sm">
-                We head out into the community to lend a hand where
-                it&apos;s needed.
+                A rhythm of GO — serving in our neighbourhood — or INVITE,
+                a more relaxed church gathering for friends and neighbours.
               </p>
             </div>
           </div>
@@ -194,6 +212,40 @@ export default function Home() {
               Find out the latest events on our Facebook page
             </a>
           </p>
+        </div>
+      </section>
+
+      {/* Small Groups */}
+      <section className="bg-white py-16 md:py-24">
+        <div className="max-w-4xl mx-auto px-6">
+          <SectionHeading>Small Groups</SectionHeading>
+          <div className="bg-white rounded-xl border-l-4 border-church-green p-8 shadow-sm">
+            <p className="text-lg text-church-slate leading-relaxed mb-4">
+              We have a number of small groups that are running regularly. If
+              you are keen to be part of one, get in contact with Maria or
+              Caro.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-8">
+              <p className="text-lg text-church-slate">
+                Maria:{" "}
+                <a
+                  href="tel:+64224097237"
+                  className="text-church-blue hover:text-church-green transition-colors underline underline-offset-4 inline-flex items-center min-h-[44px]"
+                >
+                  022 409 7237
+                </a>
+              </p>
+              <p className="text-lg text-church-slate">
+                Caro:{" "}
+                <a
+                  href="tel:+64211248354"
+                  className="text-church-blue hover:text-church-green transition-colors underline underline-offset-4 inline-flex items-center min-h-[44px]"
+                >
+                  021 124 8354
+                </a>
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 

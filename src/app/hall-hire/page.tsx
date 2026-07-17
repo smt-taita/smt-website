@@ -324,7 +324,7 @@ export default function HallHirePage() {
               <p className="text-lg text-church-slate">
                 <span className="font-medium">Phone: </span>
                 <a
-                  href="tel:+6422409237"
+                  href="tel:+64224097237"
                   className="text-church-blue hover:text-church-green transition-colors underline underline-offset-4 inline-flex items-center min-h-[44px]"
                 >
                   022 409 7237
@@ -345,9 +345,11 @@ export default function HallHirePage() {
               <span className="font-medium">Account number: </span>
               <span className="font-mono">02-0610-0070823-00</span>
             </p>
+            {/* Registered payee name — must match the bank record exactly,
+                so no macron or apostrophe here. */}
             <p className="text-lg text-church-slate mb-4">
               <span className="font-medium">Account name: </span>
-              St Matt&apos;s <span lang="mi">Taitā</span>
+              SAINT MATTHEWS - TAITA
             </p>
             {/* Reminding hirers to use their name as reference prevents payment matching issues */}
             <p className="text-lg text-church-slate bg-slate-50 border border-slate-200 rounded-lg px-4 py-3">
