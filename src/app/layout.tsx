@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import WelcomeModal from "@/components/WelcomeModal";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -13,11 +14,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "St Matt's Anglican Church Taitā",
   description:
-    "One small church with one big heart. Join us Sundays at 9:30 AM, 53 Reynolds Street, Taitā.",
+    "Transformed by Jesus, Transforming our Neighbourhood. Join us Sundays at 9:30 AM, 53 Reynolds Street, Taitā.",
   openGraph: {
     title: "St Matt's Anglican Church Taitā",
     description:
-      "One small church with one big heart. Serving the Taitā, Pomare, and Avalon communities.",
+      "Transformed by Jesus, Transforming our Neighbourhood. Serving the Taitā, Pomare, and Avalon communities.",
     type: "website",
   },
 };
@@ -30,6 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.variable} font-sans antialiased`}>
+        <WelcomeModal />
         <Header />
         <main className="pt-14">
           {children}
