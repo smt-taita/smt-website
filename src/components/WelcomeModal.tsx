@@ -14,36 +14,42 @@ export default function WelcomeModal() {
   const dialogRef = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
-    // localStorage can throw in private-browsing modes — fail closed (no popup).
-    let dismissed = true;
+    // localStorage can throw (private browsing, storage disabled) —
+    // fail closed (no popup), since dismissal couldn't be remembered anyway.
     try {
-      dismissed = localStorage.getItem(DISMISSED_KEY) === "true";
+      if (localStorage.getItem(DISMISSED_KEY) !== "true") {
+        dialogRef.current?.showModal();
+      }
     } catch {
-      return;
-    }
-    if (!dismissed) {
-      dialogRef.current?.showModal();
+      // No popup for storage-blocked visitors — better than an
+      // undismissable-in-effect one on every page load.
     }
   }, []);
 
-  function dismiss() {
+  function closeDialog() {
+    dialogRef.current?.close();
+  }
+
+  // Every close path — buttons, backdrop, Esc — fires the dialog's close
+  // event, so this is the single place dismissal is persisted.
+  function rememberDismissal() {
     try {
       localStorage.setItem(DISMISSED_KEY, "true");
     } catch {
       // Remembering the dismissal is best-effort.
     }
-    dialogRef.current?.close();
   }
 
   return (
     <dialog
       ref={dialogRef}
-      onClose={dismiss}
+      onClose={rememberDismissal}
       onClick={(e) => {
         // A click on the backdrop lands on the <dialog> element itself;
-        // clicks inside the card land on its children.
+        // clicks inside the card land on its children. (Relies on the
+        // dialog having no padding of its own — the inner div fills it.)
         if (e.target === dialogRef.current) {
-          dismiss();
+          closeDialog();
         }
       }}
       aria-labelledby="welcome-heading"
@@ -52,7 +58,7 @@ export default function WelcomeModal() {
       <div className="relative p-8">
         <button
           type="button"
-          onClick={dismiss}
+          onClick={closeDialog}
           aria-label="Close welcome message"
           className="absolute top-2 right-2 flex min-h-[44px] min-w-[44px] items-center justify-center text-church-slate hover:text-church-blue transition-colors"
         >
@@ -100,7 +106,7 @@ export default function WelcomeModal() {
 
         <button
           type="button"
-          onClick={dismiss}
+          onClick={closeDialog}
           className="mt-6 inline-flex min-h-[44px] items-center rounded-xl bg-church-amber px-6 py-3 font-semibold text-white hover:bg-amber-600 transition-colors"
         >
           Come on in
