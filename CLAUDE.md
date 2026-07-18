@@ -19,7 +19,7 @@ Next.js 16 App Router with Tailwind CSS v4 and TypeScript. All content is static
 
 **Pages:** `src/app/page.tsx` (homepage), `src/app/hall-hire/page.tsx` (hall hire details + Google Calendar embed)
 
-**Shared components:** `src/components/` — Header (fixed nav), Footer, SectionHeading (reusable section title with gradient bar)
+**Shared components:** `src/components/` — Header (fixed nav), Footer, SectionHeading (reusable section title with gradient bar), WelcomeModal (first-visit popup, client component, native `<dialog>` + localStorage dismissal)
 
 **Layout:** `src/app/layout.tsx` — Inter font via `next/font`, Header/Footer wrap all pages, `pt-14` on `<main>` accounts for the fixed header height.
 
