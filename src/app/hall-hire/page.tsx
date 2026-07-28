@@ -9,6 +9,37 @@ export const metadata: Metadata = {
 };
 
 /**
+ * Live booking enquiry form URL (Google Form, owned by the church admin account).
+ * Until the admin has built the form this stays null, and the page shows the
+ * direct-contact path instead of a dead button.
+ * Build spec: docs/hall-hire-booking-form.md
+ * TODO(admin): set this to the published Google Form URL before go-live.
+ */
+const BOOKING_FORM_URL: string | null = null;
+
+/** In-page jump targets, in page order. Ids match each section's heading. */
+const JUMP_LINKS = [
+  { href: "#facilities-heading", label: "Facilities" },
+  { href: "#charges-heading", label: "Charges" },
+  { href: "#availability-heading", label: "Availability" },
+  { href: "#book-heading", label: "Book" },
+  { href: "#conditions-heading", label: "Conditions" },
+  { href: "#payment-heading", label: "Payment" },
+];
+
+/**
+ * Facts an enquirer uses to self-qualify before reading further.
+ * Every figure here is stated elsewhere on the page — deliberately no hall
+ * capacity, which we have never published.
+ */
+const AT_A_GLANCE = [
+  { label: "Hall, kitchen and foyer", value: "$20 / hour" },
+  { label: "Front meeting room", value: "$15 / hour" },
+  { label: "Kitchen", value: "Crockery for 50+" },
+  { label: "Access", value: "Ramp from Reynolds St" },
+];
+
+/**
  * Condition item displayed as a border-accented card.
  * The left-border colour rotates through the brand palette to create
  * visual rhythm without being distracting.
@@ -62,12 +93,44 @@ export default function HallHirePage() {
       </SectionHeading>
 
       {/* ── Introduction ── */}
-      <p className="text-lg leading-relaxed text-church-slate mb-16">
+      <p className="text-lg leading-relaxed text-church-slate mb-8">
         Our facilities are a community resource available for groups across{" "}
         <span lang="mi">Taitā</span>, Pomare, and Avalon. We welcome community
         organisations, health providers, educational groups, and private hirers
         who share our values of care and respect.
       </p>
+
+      {/* ── At a glance ──
+          The four facts most enquirers decide on, surfaced before the detail
+          so they can qualify themselves in seconds rather than scrolling. */}
+      <dl className="grid grid-cols-2 md:grid-cols-4 gap-px bg-slate-200 rounded-xl overflow-hidden border border-slate-200 shadow-sm mb-8">
+        {AT_A_GLANCE.map((item) => (
+          <div key={item.label} className="bg-white px-5 py-4">
+            <dt className="text-sm text-church-slate/70">{item.label}</dt>
+            <dd className="text-lg font-semibold text-church-blue mt-1">
+              {item.value}
+            </dd>
+          </div>
+        ))}
+      </dl>
+
+      {/* ── In-page navigation ──
+          The page is long; these let someone go straight to the bit they came
+          for. Targets carry scroll-mt so the fixed header doesn't cover them. */}
+      <nav aria-label="On this page" className="mb-16">
+        <ul className="flex flex-wrap gap-2">
+          {JUMP_LINKS.map((link) => (
+            <li key={link.href}>
+              <a
+                href={link.href}
+                className="inline-flex items-center min-h-[44px] px-4 rounded-full border border-slate-200 bg-white text-church-blue hover:border-church-green hover:text-church-green transition-colors font-medium"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
 
       {/* ══════════════════════════════════════════ */}
       {/* FACILITIES                                  */}
@@ -75,7 +138,7 @@ export default function HallHirePage() {
       <section className="mb-16" aria-labelledby="facilities-heading">
         <h2
           id="facilities-heading"
-          className="text-2xl font-bold text-church-blue mb-8"
+          className="text-2xl font-bold text-church-blue scroll-mt-20 mb-8"
         >
           Our Facilities
         </h2>
@@ -146,7 +209,7 @@ export default function HallHirePage() {
       <section className="mb-16" aria-labelledby="charges-heading">
         <h2
           id="charges-heading"
-          className="text-2xl font-bold text-church-blue mb-8"
+          className="text-2xl font-bold text-church-blue scroll-mt-20 mb-8"
         >
           Charges
         </h2>
@@ -210,20 +273,96 @@ export default function HallHirePage() {
       <section className="mb-16" aria-labelledby="availability-heading">
         <h2
           id="availability-heading"
-          className="text-2xl font-bold text-church-blue mb-4"
+          className="text-2xl font-bold text-church-blue scroll-mt-20 mb-4"
         >
           Availability
         </h2>
         <p className="text-church-slate mb-6">
-          Shaded times are already booked. Contact us for available slots.
+          The times listed are already booked. Contact us for available slots.
         </p>
+        {/*
+         * Two embeds rather than one: Google Calendar's week grid is fixed-width
+         * and unreadable on a phone, so small screens get the agenda (schedule)
+         * list instead, which reads as a simple list of what's booked. Only one
+         * is ever visible; both are lazy-loaded so the hidden one costs little.
+         */}
         <div className="overflow-hidden rounded-xl border border-slate-200 shadow-sm">
+          {/* Mobile: agenda list */}
+          <iframe
+            src="https://calendar.google.com/calendar/embed?src=c_3546bfe8d5aebfc0f60e1275173956a2eb110c94a5302c97d72a17b6942d0494%40group.calendar.google.com&mode=AGENDA&showTitle=0&showPrint=0&showCalendars=0&showTabs=0&showNav=1&showDate=1&showTz=0"
+            className="w-full border-0 block md:hidden"
+            height="450"
+            loading="lazy"
+            title="Hall booking availability — upcoming bookings"
+          />
+          {/* Desktop: week grid, where the gaps are the point */}
           <iframe
             src="https://calendar.google.com/calendar/embed?src=c_3546bfe8d5aebfc0f60e1275173956a2eb110c94a5302c97d72a17b6942d0494%40group.calendar.google.com&mode=WEEK&showTitle=0&showPrint=0&showCalendars=0&showTabs=1&showNav=1&showDate=1&showTz=0"
-            className="w-full border-0"
+            className="w-full border-0 hidden md:block"
             height="500"
+            loading="lazy"
             title="Hall booking availability calendar"
           />
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════ */}
+      {/* BOOK YOUR ENQUIRY                           */}
+      {/* ══════════════════════════════════════════ */}
+      <section className="mb-16" aria-labelledby="book-heading">
+        <h2
+          id="book-heading"
+          className="text-2xl font-bold text-church-blue scroll-mt-20 mb-4"
+        >
+          Book Your Enquiry
+        </h2>
+        <p className="text-lg leading-relaxed text-church-slate mb-6">
+          Have a look at the availability calendar above before you enquire, so
+          you can suggest a time that&apos;s free. Sending an enquiry isn&apos;t
+          a confirmed booking — we&apos;ll be in touch to confirm availability.
+        </p>
+
+        {BOOKING_FORM_URL ? (
+          <a
+            href={BOOKING_FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center bg-church-amber text-white hover:bg-amber-600 transition-colors px-6 py-3 rounded-xl font-semibold min-h-[44px]"
+          >
+            Start your booking enquiry &rarr;
+          </a>
+        ) : (
+          <p className="text-lg text-church-slate bg-slate-50 border border-slate-200 rounded-lg px-4 py-3">
+            Our online booking form is coming soon. In the meantime, please get
+            in touch using the details below.
+          </p>
+        )}
+
+        {/* Direct-contact fallback — always available for those who prefer to talk to us. */}
+        <div className="bg-white rounded-xl border-l-4 border-church-green p-8 shadow-sm mt-8">
+          <h3 className="text-xl font-bold text-church-blue mb-3">
+            Prefer to talk to us first?
+          </h3>
+          <div className="space-y-3">
+            <p className="text-lg text-church-slate">
+              <span className="font-medium">Email: </span>
+              <a
+                href="mailto:admin@stmattstaita.org.nz"
+                className="text-church-blue hover:text-church-green transition-colors underline underline-offset-4 inline-flex items-center min-h-[44px]"
+              >
+                admin@stmattstaita.org.nz
+              </a>
+            </p>
+            <p className="text-lg text-church-slate">
+              <span className="font-medium">Phone: </span>
+              <a
+                href="tel:+64224097237"
+                className="text-church-blue hover:text-church-green transition-colors underline underline-offset-4 inline-flex items-center min-h-[44px]"
+              >
+                022 409 7237
+              </a>
+            </p>
+          </div>
         </div>
       </section>
 
@@ -314,68 +453,38 @@ export default function HallHirePage() {
       </section>
 
       {/* ══════════════════════════════════════════ */}
-      {/* BOOKING AND PAYMENT                        */}
+      {/* PAYMENT                                     */}
       {/* ══════════════════════════════════════════ */}
-      <section className="mb-16" aria-labelledby="booking-heading">
+      <section className="mb-16" aria-labelledby="payment-heading">
         <h2
-          id="booking-heading"
-          className="text-2xl font-bold text-church-blue mb-8"
+          id="payment-heading"
+          className="text-2xl font-bold text-church-blue scroll-mt-20 mb-8"
         >
-          Booking and Payment
+          Payment
         </h2>
 
-        <div className="bg-white rounded-xl border-l-4 border-church-green p-8 shadow-sm space-y-6">
-          {/* Contact details */}
-          <div>
-            <h3 className="text-xl font-bold text-church-blue mb-3">
-              Get in touch to book
-            </h3>
-            <div className="space-y-3">
-              <p className="text-lg text-church-slate">
-                <span className="font-medium">Email: </span>
-                <a
-                  href="mailto:admin@stmattstaita.org.nz"
-                  className="text-church-blue hover:text-church-green transition-colors underline underline-offset-4 inline-flex items-center min-h-[44px]"
-                >
-                  admin@stmattstaita.org.nz
-                </a>
-              </p>
-              <p className="text-lg text-church-slate">
-                <span className="font-medium">Phone: </span>
-                <a
-                  href="tel:+64224097237"
-                  className="text-church-blue hover:text-church-green transition-colors underline underline-offset-4 inline-flex items-center min-h-[44px]"
-                >
-                  022 409 7237
-                </a>
-              </p>
-            </div>
-          </div>
-
-          {/* Bank payment details */}
-          <div>
-            <h3 className="text-xl font-bold text-church-blue mb-3">
-              Payment by bank transfer
-            </h3>
-            <p className="text-lg text-church-slate mb-2">
-              <span className="font-medium">Bank: </span>BNZ
-            </p>
-            <p className="text-lg text-church-slate mb-2">
-              <span className="font-medium">Account number: </span>
-              <span className="font-mono">02-0610-0070823-00</span>
-            </p>
-            {/* Registered payee name — must match the bank record exactly,
-                so no macron or apostrophe here. */}
-            <p className="text-lg text-church-slate mb-4">
-              <span className="font-medium">Account name: </span>
-              SAINT MATTHEWS - TAITA
-            </p>
-            {/* Reminding hirers to use their name as reference prevents payment matching issues */}
-            <p className="text-lg text-church-slate bg-slate-50 border border-slate-200 rounded-lg px-4 py-3">
-              Please use your booking name as the payment reference so we can
-              match your payment quickly.
-            </p>
-          </div>
+        <div className="bg-white rounded-xl border-l-4 border-church-green p-8 shadow-sm">
+          <h3 className="text-xl font-bold text-church-blue mb-3">
+            Payment by bank transfer
+          </h3>
+          <p className="text-lg text-church-slate mb-2">
+            <span className="font-medium">Bank: </span>BNZ
+          </p>
+          <p className="text-lg text-church-slate mb-2">
+            <span className="font-medium">Account number: </span>
+            <span className="font-mono">02-0610-0070823-00</span>
+          </p>
+          {/* Registered payee name — must match the bank record exactly,
+              so no macron or apostrophe here. */}
+          <p className="text-lg text-church-slate mb-4">
+            <span className="font-medium">Account name: </span>
+            SAINT MATTHEWS - TAITA
+          </p>
+          {/* Reminding hirers to use their name as reference prevents payment matching issues */}
+          <p className="text-lg text-church-slate bg-slate-50 border border-slate-200 rounded-lg px-4 py-3">
+            Please use your name and &ldquo;booking&rdquo; when paying so we can
+            match your payment.
+          </p>
         </div>
       </section>
 
