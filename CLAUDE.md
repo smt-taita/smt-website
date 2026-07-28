@@ -6,6 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 St Matt's Anglican Church Taitā — a small community church website in Lower Hutt, New Zealand. Static informational site with two pages: homepage and hall hire.
 
+**Read `docs/learnings/` before starting work** — `mistakes.md` (traps that have cost time here) and `patterns.md` (what works). Add to them when something surprises you; nothing writes them automatically, and the `/session-learnings` command isn't available in this repo.
+
 ## Commands
 
 - `npm run dev` — start dev server (Next.js 16, localhost:3000)
