@@ -93,8 +93,8 @@ export default function HallHirePage() {
             </p>
             <p className="text-lg leading-relaxed text-church-slate mb-4">
               The kitchen is fully equipped with an oven, microwave, hot water
-              urn, crockery and cutlery for 50+, fridge, dishwasher, and
-              servery window to the hall.
+              urn, crockery and cutlery for 50+, fridge, dishwasher, and servery
+              window to the hall.
             </p>
             <p className="text-lg leading-relaxed text-church-slate">
               The foyer opens off the hall and works well for registration
@@ -230,68 +230,87 @@ export default function HallHirePage() {
       {/* ══════════════════════════════════════════ */}
       {/* CONDITIONS OF USE                          */}
       {/* ══════════════════════════════════════════ */}
+      {/* Collapsed by default — the conditions are reference detail rather than
+          something a first-time visitor needs to read before enquiring.
+          Native <details> so it works without JS and stays keyboard-accessible. */}
       <section className="mb-16" aria-labelledby="conditions-heading">
-        <h2
-          id="conditions-heading"
-          className="text-2xl font-bold text-church-blue mb-8"
-        >
-          Conditions of Use
-        </h2>
+        <details className="group rounded-xl border border-slate-200 bg-white shadow-sm">
+          <summary className="flex items-center justify-between gap-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden px-6 py-5 min-h-[44px] rounded-xl hover:bg-slate-50 transition-colors">
+            <h2
+              id="conditions-heading"
+              className="text-2xl font-bold text-church-blue"
+            >
+              Conditions of Use
+            </h2>
+            <span
+              aria-hidden="true"
+              className="shrink-0 text-church-green text-xl leading-none transition-transform duration-200 motion-reduce:transition-none group-open:rotate-180"
+            >
+              ▾
+            </span>
+          </summary>
 
-        <div className="space-y-8">
-          {/*
-           * Colours rotate blue → green → amber to create visual rhythm.
-           * They carry no semantic meaning — purely for scannability.
-           */}
-          <ConditionCard heading="Alcohol" accentColour="church-blue">
-            No alcohol may be consumed on the premises without prior written
-            permission from the Vicar&apos;s Warden.
-          </ConditionCard>
+          <div className="grid gap-6 md:grid-cols-2 px-6 pb-8 pt-2">
+            {/*
+             * Colours rotate blue → green → amber to create visual rhythm.
+             * They carry no semantic meaning — purely for scannability.
+             */}
+            <ConditionCard heading="Alcohol" accentColour="church-blue">
+              No alcohol may be consumed on the premises without prior written
+              permission from the Vicar&apos;s Warden.
+            </ConditionCard>
 
-          <ConditionCard heading="Cleaning" accentColour="church-green">
-            Premises must be left clean and tidy. Please clean all surfaces,
-            sweep or vacuum floors, and wash and put away all dishes before
-            leaving.
-          </ConditionCard>
+            <ConditionCard heading="Cleaning" accentColour="church-green">
+              Premises must be left clean and tidy. Please clean all surfaces,
+              sweep or vacuum floors, and wash and put away all dishes before
+              leaving.
+            </ConditionCard>
 
-          <ConditionCard heading="Rubbish and Recycling" accentColour="church-amber">
-            All rubbish must be taken away by the hirer. Please do not leave
-            rubbish in church bins.
-          </ConditionCard>
+            <ConditionCard
+              heading="Rubbish and Recycling"
+              accentColour="church-amber"
+            >
+              All rubbish must be taken away by the hirer. Please do not leave
+              rubbish in church bins.
+            </ConditionCard>
 
-          <ConditionCard heading="Storage" accentColour="church-blue">
-            No goods may be stored on the premises without prior arrangement
-            with the church office.
-          </ConditionCard>
+            <ConditionCard heading="Storage" accentColour="church-blue">
+              No goods may be stored on the premises without prior arrangement
+              with the church office.
+            </ConditionCard>
 
-          <ConditionCard heading="Damage" accentColour="church-green">
-            Any damage must be reported immediately. The hirer is liable for
-            all repair or replacement costs arising from damage during the hire
-            period.
-          </ConditionCard>
+            <ConditionCard heading="Damage" accentColour="church-green">
+              Any damage must be reported immediately. The hirer is liable for
+              all repair or replacement costs arising from damage during the
+              hire period.
+            </ConditionCard>
 
-          <ConditionCard heading="Car Parking" accentColour="church-amber">
-            Limited on-site parking is available. Additional parking can be
-            found on Reynolds Street and nearby side streets.
-          </ConditionCard>
+            <ConditionCard heading="Car Parking" accentColour="church-amber">
+              Limited on-site parking is available. Additional parking can be
+              found on Reynolds Street and nearby side streets.
+            </ConditionCard>
 
-          <ConditionCard heading="Power" accentColour="church-blue">
-            All heaters and lights must be turned off when leaving. Please
-            check all switches before locking up.
-          </ConditionCard>
+            <ConditionCard heading="Power" accentColour="church-blue">
+              All heaters and lights must be turned off when leaving. Please
+              check all switches before locking up.
+            </ConditionCard>
 
-          <ConditionCard heading="Keys" accentColour="church-green">
-            Keys are issued on payment of the hire fee and must be returned
-            after use. A $15 replacement fee applies for lost keys.
-          </ConditionCard>
+            <ConditionCard heading="Keys" accentColour="church-green">
+              Keys are issued on payment of the hire fee and must be returned
+              after use. A $15 replacement fee applies for lost keys.
+            </ConditionCard>
 
-          <ConditionCard heading="Earthquake Procedure" accentColour="church-amber">
-            In an earthquake: drop, cover, and hold. Once shaking has stopped,
-            evacuate calmly to the car park area, keeping well clear of
-            buildings. Do not re-enter the building until it has been assessed
-            as safe.
-          </ConditionCard>
-        </div>
+            <ConditionCard
+              heading="Earthquake Procedure"
+              accentColour="church-amber"
+            >
+              In an earthquake: drop, cover, and hold. Once shaking has stopped,
+              evacuate calmly to the car park area, keeping well clear of
+              buildings. Do not re-enter the building until it has been assessed
+              as safe.
+            </ConditionCard>
+          </div>
+        </details>
       </section>
 
       {/* ══════════════════════════════════════════ */}
