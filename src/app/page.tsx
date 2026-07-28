@@ -53,32 +53,42 @@ export default function Home() {
       <section className="bg-white py-16 md:py-24">
         <div className="max-w-4xl mx-auto px-6">
           <SectionHeading>Join Us Sunday</SectionHeading>
-          <div className="bg-white rounded-xl border-l-4 border-church-amber p-8 shadow-sm">
-            <p className="text-4xl md:text-5xl font-bold text-church-blue mb-4">
-              9:30 AM
-            </p>
-            <p className="text-lg mb-2">
-              <a
-                href="https://maps.app.goo.gl/WkBnzH3mxsw56Fxt7"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-church-blue hover:text-church-green transition-colors underline underline-offset-4"
-              >
-                53 Reynolds Street, <span lang="mi">Taitā</span>
-              </a>
-            </p>
-            <p className="text-church-slate text-lg mb-4">
-              Our time together typically runs for about an hour and a half
-              and includes worship, prayer, teaching and reflection for{" "}
-              <span lang="mi">tamariki</span> and adults, discussion,
-              communion, and a kids&apos; programme. As well as coffee + good{" "}
-              <span lang="mi">kai</span> afterwards — all welcome!
-            </p>
-            <p className="text-church-slate text-lg">
-              On the last Sunday of each month, we have a rhythm of GO (where
-              we serve in our neighbourhood) or INVITE (where we invite our
-              friends and neighbours to a more relaxed church gathering).
-            </p>
+          <div className="grid md:grid-cols-[3fr_2fr] gap-6 items-start">
+            <div className="bg-white rounded-xl border-l-4 border-church-amber p-8 shadow-sm">
+              <p className="text-4xl md:text-5xl font-bold text-church-blue mb-4">
+                9:30 AM
+              </p>
+              <p className="text-lg mb-2">
+                <a
+                  href="https://maps.app.goo.gl/WkBnzH3mxsw56Fxt7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-church-blue hover:text-church-green transition-colors underline underline-offset-4"
+                >
+                  53 Reynolds Street, <span lang="mi">Taitā</span>
+                </a>
+              </p>
+              <p className="text-church-slate text-lg mb-4">
+                Our time together typically runs for about an hour and a half
+                and includes worship, prayer, teaching and reflection for{" "}
+                <span lang="mi">tamariki</span> and adults, discussion,
+                communion, and a kids&apos; programme. As well as coffee + good{" "}
+                <span lang="mi">kai</span> afterwards — all welcome!
+              </p>
+              <p className="text-church-slate text-lg">
+                On the last Sunday of each month, we have a rhythm of GO (where
+                we serve in our neighbourhood) or INVITE (where we invite our
+                friends and neighbours to a more relaxed church gathering).
+              </p>
+            </div>
+            <Image
+              src="/easter-cross.jpg"
+              alt="The wooden cross outside St Matt's at dawn, with the church and a tree lit by early morning sun"
+              width={1200}
+              height={1600}
+              sizes="(min-width: 768px) 40vw, 100vw"
+              className="rounded-xl shadow-sm w-full h-auto"
+            />
           </div>
 
           {/* Giving — collapsible for privacy */}
