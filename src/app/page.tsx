@@ -136,16 +136,56 @@ export default function Home() {
       <section className="bg-white py-16 md:py-24">
         <div className="max-w-4xl mx-auto px-6">
           <SectionHeading>What&apos;s Happening in the Neighbourhood</SectionHeading>
-          <div className="grid sm:grid-cols-2 gap-6 mb-6">
+          <div className="grid sm:grid-cols-2 gap-6">
+            <div className="bg-white rounded-xl border-l-4 border-church-blue p-8 shadow-sm">
+              <p className="font-semibold text-church-blue text-lg mb-2">
+                Morning Prayers
+              </p>
+              <p className="text-church-slate mb-1">
+                Monday – Friday, 6:30 – 7:00 AM
+              </p>
+              <p className="text-church-slate text-sm">
+                We meet to pray together each morning in the church for our
+                world, our neighbourhood, and each other. All welcome.
+              </p>
+            </div>
+            <div className="bg-white rounded-xl border-l-4 border-church-amber p-8 shadow-sm">
+              <p className="font-semibold text-church-blue text-lg mb-2">
+                <span lang="mi">Kai</span> to the Community &amp; Fruit
+                and Vege Co-op
+              </p>
+              <p className="text-church-slate mb-1">
+                Tuesday afternoons, from 2:00 PM
+              </p>
+              <p className="text-church-slate text-sm mb-3">
+                Coordinated by Whānau Family Support Services Trust,{" "}
+                <span lang="mi">Kai</span> to the Community distribution
+                happens at 2:00 PM at St Matt&apos;s on Tuesdays and at Walter
+                Nash on Thursdays.
+              </p>
+              <p className="text-church-slate text-sm">
+                We are also part of the Naenae Fruit and Vege Co-op, where you
+                can order a bag of fresh fruit and veges every week for $15.
+                Pick-up times are Tuesdays 2:30 – 3:30 PM and/or 5:30 – 6:00 PM.
+              </p>
+            </div>
             <div className="bg-white rounded-xl border-l-4 border-church-green p-8 shadow-sm">
               <p className="font-semibold text-church-blue text-lg mb-2">
                 Community Garden
               </p>
-              <p className="text-church-slate mb-1">Wednesdays</p>
+              <p className="text-church-slate mb-1">
+                Wednesdays, 9:00 – 10:00 AM
+              </p>
+              <p className="text-church-slate text-sm mb-3">
+                Join us as we work together in our{" "}
+                <span lang="mi">māra kai</span>/vege garden. Come along
+                for shared <span lang="mi">mahi</span> and learn to grow
+                your own <span lang="mi">kai</span>.
+              </p>
               <p className="text-church-slate text-sm">
-                Open to everyone. Come along for shared{" "}
-                <span lang="mi">mahi</span> in the garden and learn to
-                grow your own <span lang="mi">kai</span>.
+                Produce from the garden is shared with neighbours in need and{" "}
+                <span lang="mi">Taitā Pātaka Kai</span> in Walter Nash
+                Park. No experience needed — everyone is welcome.
               </p>
               <p className="text-sm font-medium text-church-green mt-3">
                 Official Eco Church with A Rocha Aotearoa NZ
@@ -153,24 +193,29 @@ export default function Home() {
             </div>
             <div className="bg-white rounded-xl border-l-4 border-church-amber p-8 shadow-sm">
               <p className="font-semibold text-church-blue text-lg mb-2">
-                Playgroup
+                <span lang="mi">Taitā</span> Community Playgroup
               </p>
               <p className="text-church-slate mb-1">
                 Fridays, 10:00 – 11:30 AM
               </p>
               <p className="text-church-slate text-sm">
-                A relaxed morning for parents, caregivers, and little ones.
+                Join us each week during term time with parents and{" "}
+                <span lang="mi">whānau</span>,{" "}
+                <span lang="mi">pēpi</span> and{" "}
+                <span lang="mi">tamariki</span> — some music, play,{" "}
+                <span lang="mi">kōrero</span> and{" "}
+                <span lang="mi">kai</span>. Anyone welcome.
               </p>
-            </div>
-            <div className="bg-white rounded-xl border-l-4 border-church-blue p-8 shadow-sm">
-              <p className="font-semibold text-church-blue text-lg mb-2">
-                Morning Prayers
-              </p>
-              <p className="text-church-slate mb-1">
-                Weekdays, 6:30 AM
-              </p>
-              <p className="text-church-slate text-sm">
-                Start the day together in prayer. Everyone welcome.
+              <p className="mt-3">
+                <a
+                  href="https://www.facebook.com/taitaplaygroup"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-medium text-church-blue hover:text-church-green transition-colors underline underline-offset-4"
+                >
+                  <span lang="mi">Taitā</span> Community Playgroup on
+                  Facebook
+                </a>
               </p>
             </div>
             <div className="bg-white rounded-xl border-l-4 border-church-green p-8 shadow-sm">
@@ -186,12 +231,6 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <p className="text-church-slate text-lg leading-relaxed">
-            Produce from the garden is shared with neighbours in need
-            and{" "}
-            <span lang="mi">Taitā Pātaka Kai</span>. No
-            experience needed — everyone is welcome.
-          </p>
           <p className="text-center mt-8">
             <a
               href="https://www.facebook.com/profile.php?id=100088895017140"
@@ -245,6 +284,40 @@ export default function Home() {
                 </a>
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Leadership & Pastoral Support */}
+      <section className="bg-white py-16 md:py-24">
+        <div className="max-w-4xl mx-auto px-6">
+          <SectionHeading subtitle="Who to contact if you need support">
+            Our Leadership
+          </SectionHeading>
+          <div className="bg-white rounded-xl border-l-4 border-church-blue p-8 shadow-sm">
+            <p className="text-lg text-church-slate leading-relaxed mb-4">
+              St Matt&apos;s takes a team-based approach to leadership and
+              currently has a Leadership Team of four people — two clergy and
+              two lay members: Maria Kirkland, Caro Willis, Steve Willis, and
+              Sarah Colman-Shearer. The Leadership Team are responsible for the
+              mission and ministry of the church.
+            </p>
+            <p className="text-lg text-church-slate leading-relaxed mb-4">
+              Alongside that we also have a Committee responsible for finance
+              and property decisions, which involves a bigger group of people
+              as well as the Co-Missioners (Maria and Caro).
+            </p>
+            <p className="text-lg text-church-slate leading-relaxed">
+              If you need pastoral support, please get in contact with a member
+              of the Leadership Team in the first instance — you can reach us at{" "}
+              <a
+                href="mailto:admin@stmattstaita.org.nz"
+                className="text-church-blue hover:text-church-green transition-colors underline underline-offset-4"
+              >
+                admin@stmattstaita.org.nz
+              </a>
+              .
+            </p>
           </div>
         </div>
       </section>
