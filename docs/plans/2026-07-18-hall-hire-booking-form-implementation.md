@@ -15,8 +15,8 @@
 > **Shipped alongside, not in this plan** (same commit, from a separate request to
 > make the page easier to navigate):
 > - Payment reference wording changed at the church's request — now *"Please use your
->   name and 'booking' when paying so we can match your payment."* This supersedes the
->   copy in Task 1 Step 4 below, which is now stale.
+>   name and 'booking' when paying so we can match your payment."* The Task 1 Step 4
+>   snippet below has been updated to match what shipped.
 > - An "at a glance" strip below the intro (both rates, kitchen, ramp access).
 > - A jump-link row to each section, with `scroll-mt-20` on the targets.
 > - The availability calendar serves Google's agenda list on phones and keeps the week
@@ -92,7 +92,7 @@ Insert the following block **immediately after the closing `</section>` of the A
       <section className="mb-16" aria-labelledby="book-heading">
         <h2
           id="book-heading"
-          className="text-2xl font-bold text-church-blue mb-4"
+          className="text-2xl font-bold text-church-blue scroll-mt-20 mb-4"
         >
           Book Your Enquiry
         </h2>
@@ -158,7 +158,7 @@ Replace the **entire** `BOOKING AND PAYMENT` section (comment banner + `<section
       <section className="mb-16" aria-labelledby="payment-heading">
         <h2
           id="payment-heading"
-          className="text-2xl font-bold text-church-blue mb-8"
+          className="text-2xl font-bold text-church-blue scroll-mt-20 mb-8"
         >
           Payment
         </h2>
@@ -182,8 +182,8 @@ Replace the **entire** `BOOKING AND PAYMENT` section (comment banner + `<section
           </p>
           {/* Reminding hirers to use their name as reference prevents payment matching issues */}
           <p className="text-lg text-church-slate bg-slate-50 border border-slate-200 rounded-lg px-4 py-3">
-            Please use your booking name as the payment reference so we can
-            match your payment quickly.
+            Please use your name and &ldquo;booking&rdquo; when paying so we can
+            match your payment.
           </p>
         </div>
       </section>
