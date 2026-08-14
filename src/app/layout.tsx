@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WelcomeModal from "@/components/WelcomeModal";
 import StructuredData from "@/components/StructuredData";
+import { Analytics } from "@vercel/analytics/next";
 import { siteName, siteUrl } from "@/lib/site";
 
 const inter = Inter({
@@ -67,6 +68,10 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        {/* Vercel Web Analytics — cookieless and non-identifying, so no
+            consent banner is needed. Counts visits from every source, which
+            Search Console cannot see (it only counts Google search clicks). */}
+        <Analytics />
       </body>
     </html>
   );
