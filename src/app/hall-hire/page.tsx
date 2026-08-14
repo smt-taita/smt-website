@@ -2,10 +2,30 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SectionHeading from "@/components/SectionHeading";
 
+const description =
+  "Hire St Matt's Taitā hall, kitchen, and meeting rooms for community events. Available to groups across Taitā, Pomare, and Avalon. From $15/hour.";
+
 export const metadata: Metadata = {
-  title: "Hall Hire | St Matt's Anglican Church Taitā",
-  description:
-    "Hire St Matt's Taitā hall, kitchen, and meeting rooms for community events. Available to groups across Taitā, Pomare, and Avalon. From $15/hour.",
+  // The layout's title template appends the church name.
+  title: "Hall Hire",
+  description,
+  alternates: {
+    canonical: "/hall-hire",
+  },
+  openGraph: {
+    title: "Hall Hire | St Matt's Anglican Church Taitā",
+    description,
+    url: "/hall-hire",
+    type: "website",
+    // Declaring an openGraph block here stops this page inheriting the
+    // root opengraph-image.jpg, so point at it explicitly.
+    images: ["/opengraph-image.jpg"],
+  },
+  twitter: {
+    title: "Hall Hire | St Matt's Anglican Church Taitā",
+    description,
+    images: ["/twitter-image.jpg"],
+  },
 };
 
 /**
