@@ -83,3 +83,33 @@ involving absolute URLs.
 
 **Triggers:** "does it look right", shipping a layout change, "og:image", "metadataBase",
 "verified" when no browser was available, "check the meta tags".
+
+---
+
+## A first-in-DOM popup can hijack the Google search snippet
+
+**Date:** 2026-08-25
+
+**What happened:** The homepage's Google result showed a stitched, half-broken snippet —
+"We meet every Sunday at 9:30 AM at 53 Reynolds Street, Taitā. a half and includes worship,
+prayer, 022 409 7237|admin@stmattstaita.org.nz" — despite a correct `<meta name="description">`
+being live and correct. The instinct is to blame the metadata. The metadata was fine.
+
+The real cause: `<WelcomeModal />` was rendered first inside `<body>` in `layout.tsx`, so the
+first prose in the served HTML was the popup's copy, not the page's. A `<dialog>` without the
+`open` attribute is hidden to a visitor but fully present in the DOM, and Google used it as its
+snippet source — then tacked on the footer's contact line to fill out the length.
+
+Fix: render `<WelcomeModal />` last, after `<Footer />`. A `<dialog>` moves to the browser's
+top layer when `showModal()` is called, so DOM order has no effect on how it looks or behaves.
+
+**Rules:**
+- A meta description is a *suggestion*. Google builds its own snippet whenever the page's own
+  text looks like a better answer — so the top-of-DOM text has to read well on its own.
+- When a snippet looks wrong, extract the served HTML's visible text and read the first ~300
+  characters. That's the candidate pool. Don't start by rewriting the metadata.
+- Client components rendered "somewhere in the layout" have an SEO position, not just a visual
+  one. Put chrome (modals, banners, toasts) after the content they overlay.
+
+**Triggers:** "search preview looks wrong", "Google is showing the wrong description", "snippet
+is truncated/garbled", adding a modal or banner to `layout.tsx`, "meta description is ignored".

@@ -74,3 +74,36 @@ The facts that cost time to establish:
 
 **Triggers:** "point it at the domain", "DNS", "go live", "iwantmyname", "www redirect",
 "is it live", "add a subdomain", anything touching MX or email.
+
+---
+
+## The three parts of a Google result are controlled by three different things
+
+**Date:** 2026-08-25
+
+A search result has three lines, and they come from three separate places. Reaching for the
+meta description fixes only one of them.
+
+| Line in the result | Comes from |
+| --- | --- |
+| **Site name + favicon** (top) | `WebSite` JSON-LD `name` — **homepage only**; icon from `src/app/icon.svg` |
+| **Blue title link** | `<title>`, i.e. `metadata.title` in `layout.tsx` |
+| **Grey snippet** | The meta description *if Google likes it*, otherwise text scraped from the page |
+
+Things worth knowing:
+
+- `og:site_name` is **not** the site-name signal for Google — it was already set here and Google
+  still showed the bare domain `stmattstaita.org.nz`. `WebSite` structured data is what it reads,
+  and it only reads it from the homepage, which is why `WebSiteSchema` renders in `page.tsx`
+  rather than sitewide in the layout.
+- Keep the `WebSite` `name` short (`St Matt's Taitā`). The full church name is already the title
+  on the next line, so using it in both spots just repeats itself.
+- The favicon must survive 16px. `smt-logo.jpg` is a hand-drawn cross with hatching and grid
+  texture that greys out below ~64px, so `icon.svg` is a flat rebuild of the same mark. Render it
+  at 16/24/32px on both white and grey before believing it works — and keep the crossbar above
+  centre, or it reads as a first-aid symbol.
+- None of this is binding on Google. It picks what it wants; you're supplying better options.
+  Deploy, then request re-indexing in Search Console — otherwise it's weeks before anything moves.
+
+**Triggers:** "search result shows the domain instead of our name", "site name in Google",
+"favicon in search results", "og:site_name isn't working", "WebSite schema", editing `icon.svg`.
