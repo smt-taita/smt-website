@@ -1,9 +1,13 @@
 import Image from "next/image";
 import SectionHeading from "@/components/SectionHeading";
+import WebSiteSchema from "@/components/WebSiteSchema";
 
 export default function Home() {
   return (
     <>
+      {/* Homepage-only: tells Google the site name for search results. */}
+      <WebSiteSchema />
+
       {/* Hero */}
       <section className="min-h-screen bg-gradient-to-br from-church-blue to-church-green flex items-center justify-center -mt-14">
         <div className="text-center text-white px-6 py-24">
